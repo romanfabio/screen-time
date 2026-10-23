@@ -1,0 +1,50 @@
+# Secrets and signing material: never commit
+*.jks
+*.keystore
+*.p12
+*.pem
+keystore.properties
+local.properties
+google-services.json
+.env
+.env.*
+
+# Build output and release artifacts
+/build/
+/app/build/
+/dist/
+*.apk
+*.aab
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Gradle / Kotlin
+.gradle/
+.kotlin/
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.fleet/
+
+# AI assistant local state (CLAUDE.md is shared, local settings are not)
+.claude/
+CLAUDE.local.md
+
+# OS and tool noise
+.DS_Store
+Thumbs.db
+*.log
+*.hprof
+
+# Local analysis dumps (raw usage data is personal)
+*.db
+*.db-shm
+*.db-wal
+raw_events*.csv

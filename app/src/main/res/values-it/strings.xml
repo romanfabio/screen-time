@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Screen Time</string>
+    <string name="nav_settings">Impostazioni</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_settings">Impostazioni</string>
+    <string name="action_back">Indietro</string>
+    <string name="action_continue">Continua</string>
+    <string name="action_skip">Salta</string>
+
+    <!-- Permission banner -->
+    <string name="banner_usage_access_title">Accesso all’utilizzo disattivato</string>
+    <string name="banner_usage_access_body">Senza questo accesso l’app non può registrare il nuovo tempo di utilizzo. Lo storico è al sicuro.</string>
+    <string name="banner_usage_access_action">Attiva</string>
+
+    <!-- Onboarding -->
+    <string name="onb_welcome_title">Il tuo tempo di utilizzo, solo sul tuo telefono</string>
+    <string name="onb_welcome_body">Questa app registra quanto usi il telefono e ogni app. Tutto resta su questo dispositivo: nessun account, nessuna pubblicità e l’app non ha il permesso di accedere a internet.</string>
+    <string name="onb_usage_title">Consenti l’accesso all’utilizzo</string>
+    <string name="onb_usage_body">Android tiene un registro di quale app è in primo piano. Per leggerlo, cerca “Screen Time” nell’elenco che si apre e attivalo.</string>
+    <string name="onb_usage_action">Apri le impostazioni di accesso all’utilizzo</string>
+    <string name="onb_usage_granted">Accesso all’utilizzo attivo</string>
+    <string name="onb_battery_title">Mantienila attiva</string>
+    <string name="onb_battery_body">L’app legge il registro di Android solo ogni poche ore, con un consumo di batteria quasi nullo. Alcuni telefoni bloccano troppo i processi in background, quindi conviene escludere questa app.</string>
+    <string name="onb_battery_status_on">Restrizione batteria: disattivata (bene)</string>
+    <string name="onb_battery_status_off">Restrizione batteria: attiva</string>
+    <string name="onb_battery_action">Consenti uso in background senza restrizioni</string>
+    <string name="onb_battery_app_settings">Apri le impostazioni dell’app</string>
+    <string name="onb_battery_tips_realme">Su realme / Oppo / OnePlus: apri le impostazioni dell’app, poi Batteria, e consenti attività in background e avvio automatico. Blocca anche l’app nell’elenco delle app recenti.</string>
+    <string name="onb_battery_tips_xiaomi">Su Xiaomi / Redmi / Poco: apri le impostazioni dell’app, imposta Risparmio batteria su Nessuna restrizione e attiva Avvio automatico.</string>
+    <string name="onb_battery_tips_samsung">Su Samsung: apri le impostazioni della batteria, poi Limiti di utilizzo in background, e verifica che l’app non sia negli elenchi delle app in stop.</string>
+    <string name="onb_battery_tips_generic">Se il telefono ha un gestore batteria aggiuntivo, imposta questa app su senza restrizioni e consentile l’avvio automatico.</string>
+    <string name="onb_import_title">Importazione dello storico</string>
+    <string name="onb_import_working">Lettura di ciò che Android ha registrato…</string>
+    <string name="onb_import_done">Fatto. Importate %1$d sessioni di app e %2$d sblocchi.</string>
+    <string name="onb_import_error">Importazione non riuscita: %1$s</string>
+    <string name="onb_import_retry">Riprova</string>
+    <string name="onb_finish">Apri la dashboard</string>
+
+    <!-- Dashboard -->
+    <string name="range_today">Oggi</string>
+    <string name="range_week">7 giorni</string>
+    <string name="range_month">30 giorni</string>
+    <string name="date_today">Oggi</string>
+    <string name="date_yesterday">Ieri</string>
+    <string name="screen_time">Tempo di utilizzo</string>
+    <string name="vs_yesterday">rispetto a ieri</string>
+    <string name="vs_previous_week">rispetto ai 7 giorni precedenti</string>
+    <string name="vs_previous_month">rispetto ai 30 giorni precedenti</string>
+    <string name="tile_unlocks">Sblocchi</string>
+    <string name="tile_notifications">Notifiche</string>
+    <string name="unlocked_line">Telefono sbloccato %1$s</string>
+    <string name="tile_first_pickup">Primo sblocco</string>
+    <string name="tile_last_use">Ultimo uso</string>
+    <string name="tile_unlocks_per_day">Sblocchi al giorno</string>
+    <string name="tile_daily_average">Media giornaliera</string>
+    <!-- Settings -->
+    <string name="settings_section_apps">App</string>
+    <string name="settings_show_hidden">Mostra app di sistema e launcher</string>
+    <string name="settings_show_hidden_hint">Launcher, servizi di sistema e questa app sono nascosti di default. Attiva per includerli in elenchi, grafici e totale.</string>
+    <string name="settings_section_permissions">Permessi</string>
+    <string name="settings_usage_access">Accesso all’utilizzo</string>
+    <string name="settings_battery">Uso in background senza restrizioni</string>
+    <string name="settings_status_on">Attivo</string>
+    <string name="settings_status_off">Disattivato</string>
+    <string name="settings_fix">Correggi</string>
+    <string name="settings_section_data">Dati</string>
+    <string name="settings_last_sync">Ultima sincronizzazione: %1$s</string>
+    <string name="settings_never">mai</string>
+    <string name="settings_stale_warning">L’ultima sincronizzazione risale a un po’ di tempo fa. Android conserva solo circa 10 giorni di dettaglio, quindi apri l’app regolarmente per evitare buchi.</string>
+    <string name="settings_sync_now">Sincronizza ora</string>
+    <string name="settings_syncing">Sincronizzazione…</string>
+    <string name="settings_export_csv">Esporta CSV</string>
+    <string name="settings_export_json">Esporta JSON</string>
+    <string name="settings_export_done">Esportato.</string>
+    <string name="settings_export_failed">Esportazione non riuscita: %1$s</string>
+    <string name="settings_section_about">Informazioni</string>
+    <string name="settings_version">Versione %1$s</string>
+    <string name="settings_privacy">Tutti i dati restano su questo telefono. L’app non ha il permesso di accedere a internet.</string>
+    <string name="settings_diagnostics">Diagnostica (eventi grezzi)</string>
+    <string name="detail_time_in_app">Tempo nell’app</string>
+    <string name="detail_opens">Aperture</string>
+    <string name="detail_avg_session">Apertura media</string>
+    <string name="detail_when">Quando la usi</string>
+    <string name="apps_title">App</string>
+    <string name="home_screen">Schermata Home</string>
+    <string name="sort_time">Tempo</string>
+    <string name="sort_opens">Aperture</string>
+    <string name="sort_notifications">Notif.</string>
+    <string name="empty_title">Ancora nessun dato</string>
+    <string name="empty_body">Niente registrato per questo periodo. L’utilizzo appare qui dopo la prima sincronizzazione.</string>
+    <plurals name="opens_count">
+        <item quantity="one">%d apertura</item>
+        <item quantity="many">%d aperture</item>
+        <item quantity="other">%d aperture</item>
+    </plurals>
+    <plurals name="notifications_count">
+        <item quantity="one">%d notifica</item>
+        <item quantity="many">%d notifiche</item>
+        <item quantity="other">%d notifiche</item>
+    </plurals>
+</resources>
