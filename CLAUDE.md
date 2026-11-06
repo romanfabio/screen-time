@@ -8,7 +8,7 @@ Guidance for working in this repository. Read [docs/ARCHITECTURE.md](docs/ARCHIT
 Android app (Kotlin, Jetpack Compose, Material 3, Room, WorkManager) that shows screen time per day and per app.
 It does not record anything itself: it periodically copies Android's usage-event log (`UsageStatsManager`) into
 its own Room database. Single module `:app`, package `io.github.romanfabio.screentime`, minSdk 28, target and
-compile SDK 36, version 1.0.0. Android only, offline, distributed as a sideloaded APK (not on Google Play).
+compile SDK 36, version 1.0.1. Android only, offline, distributed as a sideloaded APK (not on Google Play).
 
 ## Commands
 
@@ -58,8 +58,10 @@ Android imports so they stay unit-testable. DI is the hand-written `AppContainer
 - **Strings**: every user-visible string goes in both `res/values/strings.xml` (English) and
   `res/values-it/strings.xml` (Italian). Durations use the language-neutral `2h 15m` format (`ui/Format.kt`).
 - Charts are drawn with Compose Canvas (no chart library). Keep the UI minimal; do not add screens without a reason.
-- Do not add dependencies lightly: each one ships in the APK and must be license-compatible with MIT. Update
-  `THIRD_PARTY_NOTICES.md` when adding or removing a runtime dependency.
+- Do not add dependencies lightly: each one ships in the APK and must be license-compatible with MIT. When adding or
+  removing a runtime dependency update **both** `THIRD_PARTY_NOTICES.md` and `app/src/main/res/raw/third_party_libraries.txt`
+  (shown in Settings → Open source licenses, together with the full Apache-2.0 text and this app's MIT text).
+  `res/raw/license_app_mit.txt` must stay identical to `LICENSE` (a unit test checks it).
 - Compose BOM / Navigation are pinned to versions that compile against SDK 36 (newer ones need SDK 37 and a newer
   Android Gradle Plugin). Check `gradle/libs.versions.toml` before bumping.
 

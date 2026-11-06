@@ -51,7 +51,7 @@ private const val STALE_AFTER_MS = 3L * 24 * 60 * 60 * 1000
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SettingsScreen(onBack: () -> Unit, onOpenDebug: () -> Unit) {
+fun SettingsScreen(onBack: () -> Unit, onOpenDebug: () -> Unit, onOpenLicenses: () -> Unit) {
     val context = LocalContext.current
     val container = context.container
     val scope = rememberCoroutineScope()
@@ -183,6 +183,7 @@ fun SettingsScreen(onBack: () -> Unit, onOpenDebug: () -> Unit) {
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
+            TextButton(onClick = onOpenLicenses) { Text(stringResource(R.string.settings_licenses)) }
             TextButton(onClick = onOpenDebug) { Text(stringResource(R.string.settings_diagnostics)) }
         }
     }

@@ -95,14 +95,14 @@ private fun Summary(d: AppDetailData) {
         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(stringResource(R.string.detail_time_in_app), style = MaterialTheme.typography.labelLarge)
             Text(formatDuration(d.foreground.value), style = MaterialTheme.typography.displayMedium)
-            DeltaText(d.foreground, d.range)
+            DeltaText(d.foreground, d.range, d.endDate)
         }
     }
     Column(Modifier.padding(top = 12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Tile(stringResource(R.string.detail_opens), d.opens.value.toString(), Modifier.weight(1f)) { DeltaText(d.opens, d.range) }
+            Tile(stringResource(R.string.detail_opens), d.opens.value.toString(), Modifier.weight(1f)) { DeltaText(d.opens, d.range, d.endDate) }
             Tile(stringResource(R.string.tile_notifications), d.notifications.value.toString(), Modifier.weight(1f)) {
-                DeltaText(d.notifications, d.range)
+                DeltaText(d.notifications, d.range, d.endDate)
             }
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

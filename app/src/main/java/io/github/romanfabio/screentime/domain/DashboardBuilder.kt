@@ -177,3 +177,13 @@ object DashboardBuilder {
         )
     }
 }
+
+/** What a "vs previous period" figure is compared with, so the label stays correct when browsing past days. */
+enum class ComparisonPeriod { YESTERDAY, PREVIOUS_DAY, PREVIOUS_WEEK, PREVIOUS_MONTH }
+
+/** For a day view, "yesterday" only makes sense while looking at today; any earlier day compares with the day before. */
+fun comparisonPeriod(range: DashboardRange, endDate: LocalDate, today: LocalDate): ComparisonPeriod = when (range) {
+    DashboardRange.TODAY -> if (endDate == today) ComparisonPeriod.YESTERDAY else ComparisonPeriod.PREVIOUS_DAY
+    DashboardRange.WEEK -> ComparisonPeriod.PREVIOUS_WEEK
+    DashboardRange.MONTH -> ComparisonPeriod.PREVIOUS_MONTH
+}

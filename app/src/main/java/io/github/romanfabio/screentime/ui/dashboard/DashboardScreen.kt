@@ -46,6 +46,8 @@ import androidx.lifecycle.viewmodel.viewModelFactory
 import io.github.romanfabio.screentime.R
 import io.github.romanfabio.screentime.container
 import io.github.romanfabio.screentime.domain.AppRow
+import io.github.romanfabio.screentime.domain.ComparisonPeriod
+import io.github.romanfabio.screentime.domain.comparisonPeriod
 import io.github.romanfabio.screentime.domain.DashboardBuilder
 import io.github.romanfabio.screentime.domain.DashboardData
 import io.github.romanfabio.screentime.domain.DashboardRange
@@ -170,16 +172,17 @@ internal fun PeriodStepper(
 }
 
 @Composable
-internal fun comparisonLabel(range: DashboardRange): String = stringResource(
-    when (range) {
-        DashboardRange.TODAY -> R.string.vs_yesterday
-        DashboardRange.WEEK -> R.string.vs_previous_week
-        DashboardRange.MONTH -> R.string.vs_previous_month
+internal fun comparisonLabel(range: DashboardRange, endDate: LocalDate): String = stringResource(
+    when (comparisonPeriod(range, endDate, LocalDate.now())) {
+        ComparisonPeriod.YESTERDAY -> R.string.vs_yesterday
+        ComparisonPeriod.PREVIOUS_DAY -> R.string.vs_previous_day
+        ComparisonPeriod.PREVIOUS_WEEK -> R.string.vs_previous_week
+        ComparisonPeriod.PREVIOUS_MONTH -> R.string.vs_previous_month
     },
 )
 
 @Composable
-internal fun DeltaText(metric: Metric, range: DashboardRange, modifier: Modifier = Modifier) {
+internal fun DeltaText(metric: Metric, range: DashboardRange, endDate: LocalDate, modifier: Modifier = Modifier) {
     val pct = metric.changePercent ?: return
     val arrow = when {
         pct > 0 -> "▲"
@@ -187,7 +190,7 @@ internal fun DeltaText(metric: Metric, range: DashboardRange, modifier: Modifier
         else -> "●"
     }
     Text(
-        "$arrow ${kotlin.math.abs(pct)}% ${comparisonLabel(range)}",
+        "$arrow ${kotlin.math.abs(pct)}% ${comparisonLabel(range, endDate)}",
         modifier,
         style = MaterialTheme.typography.bodySmall,
         color = MaterialTheme.colorScheme.onSurfaceVariant,
@@ -200,7 +203,7 @@ private fun HeroCard(d: DashboardData) {
         Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(4.dp)) {
             Text(stringResource(R.string.screen_time), style = MaterialTheme.typography.labelLarge)
             Text(formatDuration(d.screenTime.value), style = MaterialTheme.typography.displayMedium)
-            DeltaText(d.screenTime, d.range)
+            DeltaText(d.screenTime, d.range, d.endDate)
             Text(
                 stringResource(R.string.unlocked_line, formatDuration(d.unlockedMs)),
                 style = MaterialTheme.typography.bodySmall,
@@ -214,9 +217,9 @@ private fun HeroCard(d: DashboardData) {
 private fun Tiles(d: DashboardData) {
     Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Tile(stringResource(R.string.tile_unlocks), d.unlocks.value.toString(), Modifier.weight(1f)) { DeltaText(d.unlocks, d.range) }
+            Tile(stringResource(R.string.tile_unlocks), d.unlocks.value.toString(), Modifier.weight(1f)) { DeltaText(d.unlocks, d.range, d.endDate) }
             Tile(stringResource(R.string.tile_notifications), d.notifications.value.toString(), Modifier.weight(1f)) {
-                DeltaText(d.notifications, d.range)
+                DeltaText(d.notifications, d.range, d.endDate)
             }
         }
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {

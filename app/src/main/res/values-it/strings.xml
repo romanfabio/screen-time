@@ -45,6 +45,7 @@
     <string name="date_yesterday">Ieri</string>
     <string name="screen_time">Tempo di utilizzo</string>
     <string name="vs_yesterday">rispetto a ieri</string>
+    <string name="vs_previous_day">rispetto al giorno prima</string>
     <string name="vs_previous_week">rispetto ai 7 giorni precedenti</string>
     <string name="vs_previous_month">rispetto ai 30 giorni precedenti</string>
     <string name="tile_unlocks">Sblocchi</string>
@@ -78,6 +79,13 @@
     <string name="settings_version">Versione %1$s</string>
     <string name="settings_privacy">Tutti i dati restano su questo telefono. L’app non ha il permesso di accedere a internet.</string>
     <string name="settings_diagnostics">Diagnostica (eventi grezzi)</string>
+    <string name="settings_licenses">Licenze open source</string>
+    <string name="licenses_title">Licenze open source</string>
+    <string name="licenses_intro">Screen Time è software libero. È costruita con le librerie open source qui sotto, le cui licenze richiedono che questo avviso e il testo della licenza accompagnino l’app.</string>
+    <string name="licenses_section_app">Screen Time</string>
+    <string name="licenses_section_libraries">Librerie</string>
+    <string name="licenses_section_apache">Apache License 2.0</string>
+    <string name="licenses_source_code">Codice sorgente su GitHub</string>
     <string name="detail_time_in_app">Tempo nell’app</string>
     <string name="detail_opens">Aperture</string>
     <string name="detail_avg_session">Apertura media</string>

@@ -1,0 +1,8 @@
+Screen Time bundles these open-source libraries, all unmodified and all licensed under the Apache License 2.0 (full text below):
+
+- AndroidX: Activity, Core, Lifecycle, Navigation, Room, SQLite, Startup, WorkManager, Profile Installer and their AndroidX dependencies
+- Jetpack Compose: UI, Foundation, Material 3, Animation, Runtime, Graphics
+- Kotlin standard library
+- kotlinx.coroutines
+- JSpecify annotations
+- Guava listenablefuture 1.0 (empty marker artifact)

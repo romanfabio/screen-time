@@ -15,6 +15,7 @@ import io.github.romanfabio.screentime.container
 import io.github.romanfabio.screentime.ui.appdetail.AppDetailScreen
 import io.github.romanfabio.screentime.ui.dashboard.DashboardScreen
 import io.github.romanfabio.screentime.ui.debug.DebugScreen
+import io.github.romanfabio.screentime.ui.licenses.LicensesScreen
 import io.github.romanfabio.screentime.ui.onboarding.OnboardingScreen
 import io.github.romanfabio.screentime.ui.settings.SettingsScreen
 import kotlinx.coroutines.Dispatchers
@@ -25,6 +26,7 @@ object Routes {
     const val DASHBOARD = "dashboard"
     const val SETTINGS = "settings"
     const val DEBUG = "debug"
+    const val LICENSES = "licenses"
     const val APP_DETAIL = "app/{packageName}"
 
     fun appDetail(packageName: String) = "app/$packageName"
@@ -80,7 +82,11 @@ fun ScreenTimeApp() {
             SettingsScreen(
                 onBack = { navController.popBackStack() },
                 onOpenDebug = { navController.navigate(Routes.DEBUG) },
+                onOpenLicenses = { navController.navigate(Routes.LICENSES) },
             )
+        }
+        composable(Routes.LICENSES) {
+            LicensesScreen(onBack = { navController.popBackStack() })
         }
     }
 }

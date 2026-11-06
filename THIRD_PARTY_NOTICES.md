@@ -15,7 +15,9 @@ was prepared; all of them are permissive and compatible with MIT.
 | JSpecify annotations | Nullness annotations | Apache License 2.0 |
 | Guava `listenablefuture` 1.0 | Empty marker artifact pulled in by AndroidX | Apache License 2.0 (part of Guava) |
 
-Apache License 2.0: <https://www.apache.org/licenses/LICENSE-2.0>. These libraries are used unmodified. The app ships
+Apache License 2.0: <https://www.apache.org/licenses/LICENSE-2.0>. The full text, this list and the MIT notice of the app
+itself are also shown inside the app (Settings → Open source licenses), so they travel with every copy of the APK. These
+libraries are used unmodified. The app ships
 no fonts, images, or other third-party assets: the launcher icon is an original vector drawing made for this
 project, and all text is original.
 
