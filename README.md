@@ -6,6 +6,17 @@ stays on the device.
 
 > **Requires Android 9 (API 28) or newer.**
 
+## Screenshots
+
+<p align="center">
+  <img src="docs/screenshots/dashboard.png" alt="Dashboard: 7 days of screen time with unlocks, notifications and a daily chart" width="24%">
+  <img src="docs/screenshots/apps.png" alt="Dashboard chart and the per-app list with time, opens and notifications" width="24%">
+  <img src="docs/screenshots/app-detail.png" alt="App detail: time in app, opens, notifications and a daily chart" width="24%">
+  <img src="docs/screenshots/settings.png" alt="Settings: permissions, last sync, data export and about" width="24%">
+</p>
+
+*The screenshots show made-up demo data, not a real person's usage.*
+
 ## What it shows
 
 - **Screen time** per day, 7 days or 30 days, with the change against the previous period.
